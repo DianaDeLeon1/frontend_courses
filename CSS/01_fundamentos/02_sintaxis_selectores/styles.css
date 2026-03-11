@@ -1,3 +1,50 @@
+/*CSS funciona como cascada, los estilos se pueden heredar, los estilos que impactan a fuentes (color, margin, border, possition, etc...)*/
+
+/*ELEMENTOS*/
 p {
     margin-bottom: 30px;
 }
+
+/*CLASES*/
+/*llamar clases con el prefijo . */
+.rojo{
+    color: red;
+}
+
+.contenedor{
+    border: 2px solid blue;
+}
+
+/*Selectores descendinentes*/
+.contenedor p{
+    color: blueviolet;
+}
+
+/*IDs*/
+/*llamar id con el prefijo # */
+#unico{
+    background-color: yellow;
+}
+
+/*PSEUDOCLASES*/
+/*Cambio de estado a los elementos*/
+button:hover{
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+a:link{
+    color: green;
+}
+a:visited{
+    color: yellow !important;
+}
+
+/*Especificidad
+
+Elemento (h1, p, div): 0,0,0,1
+Clase (.rojo, .grande): 0,0,1,0
+ID (#unico): 0,1,0,0
+Inline style ="...": 1,0,0,0
+!important: Gana siempre (¡úsalo con cuidado!) 
+*/ 
